@@ -1,0 +1,22 @@
+CREATE TABLE TBLHISTORICOCONTRATOS
+(
+  ID_CONTRATO integer,
+  CONTRATO_ADITIVO varchar(1),
+  ID_MODALIDADE integer,
+  NUMERO_CONTRATO varchar(20),
+  NUMERO_LICITACAO varchar(20),
+  ANO_EXERCICIO varchar(4),
+  DATA_INICIO date,
+  DATA_FINAL date,
+  ARQUIVO_CONTRATO varchar(255),
+  HISTORICO_CONTRATO blob sub_type 1,
+  VALOR_CONTRATO decimal(18,2),
+  SALDO_CONTRATO decimal(18,2),
+  ID_ORGAO integer,
+  ID_FORNECEDOR integer,
+  ID_GENERO integer,
+  ID_USUARIO integer,
+  ACAO varchar(1),
+  DATA_MODIFICACAO date,
+  HORA_MODIFICACAO time
+);

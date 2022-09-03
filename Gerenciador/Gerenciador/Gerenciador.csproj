@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29CAC38C-C87D-4E48-895D-C9325235B7A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gerenciador</RootNamespace>
+    <AssemblyName>Gerenciador</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>briefcase-table.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.7.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.5.7.0\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcaoTela.cs" />
+    <Compile Include="FrmBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackupRestore.Designer.cs">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBairro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBairro.Designer.cs">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBairroPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBairroPesquisa.Designer.cs">
+      <DependentUpon>FrmBairroPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaixaItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaixaItens.Designer.cs">
+      <DependentUpon>FrmBaixaItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContrato.Designer.cs">
+      <DependentUpon>FrmContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContratoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContratoPesquisa.Designer.cs">
+      <DependentUpon>FrmContratoPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartamento.Designer.cs">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartamentoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartamentoPesquisa.Designer.cs">
+      <DependentUpon>FrmDepartamentoPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstornoItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstornoItens.Designer.cs">
+      <DependentUpon>FrmEstornoItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedorPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedorPesquisa.Designer.cs">
+      <DependentUpon>FrmFornecedorPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenero.Designer.cs">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeneroPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeneroPesquisa.Designer.cs">
+      <DependentUpon>FrmGeneroPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmItensContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItensContrato.Designer.cs">
+      <DependentUpon>FrmItensContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcaPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcaPesquisa.Designer.cs">
+      <DependentUpon>FrmMarcaPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenus.Designer.cs">
+      <DependentUpon>FrmMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrgao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrgao.Designer.cs">
+      <DependentUpon>FrmOrgao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrgaoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrgaoPesquisa.Designer.cs">
+      <DependentUpon>FrmOrgaoPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutoPesquisa.Designer.cs">
+      <DependentUpon>FrmProdutoPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResponsavel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResponsavel.Designer.cs">
+      <DependentUpon>FrmResponsavel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResponsavelPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResponsavelPesquisa.Designer.cs">
+      <DependentUpon>FrmResponsavelPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnidMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnidMedida.Designer.cs">
+      <DependentUpon>FrmUnidMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnidMedidaPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnidMedidaPesquisa.Designer.cs">
+      <DependentUpon>FrmUnidMedidaPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuariosPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuariosPesquisa.Designer.cs">
+      <DependentUpon>FrmUsuariosPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\FormClosingEventHandler.cs" />
+    <EmbeddedResource Include="FrmBackupRestore.resx">
+      <DependentUpon>FrmBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBairro.resx">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBairroPesquisa.resx">
+      <DependentUpon>FrmBairroPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaixaItens.resx">
+      <DependentUpon>FrmBaixaItens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContrato.resx">
+      <DependentUpon>FrmContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContratoPesquisa.resx">
+      <DependentUpon>FrmContratoPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartamentoPesquisa.resx">
+      <DependentUpon>FrmDepartamentoPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstornoItens.resx">
+      <DependentUpon>FrmEstornoItens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedorPesquisa.resx">
+      <DependentUpon>FrmFornecedorPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenero.resx">
+      <DependentUpon>FrmGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeneroPesquisa.resx">
+      <DependentUpon>FrmGeneroPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItensContrato.resx">
+      <DependentUpon>FrmItensContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcaPesquisa.resx">
+      <DependentUpon>FrmMarcaPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenus.resx">
+      <DependentUpon>FrmMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrgao.resx">
+      <DependentUpon>FrmOrgao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrgaoPesquisa.resx">
+      <DependentUpon>FrmOrgaoPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutoPesquisa.resx">
+      <DependentUpon>FrmProdutoPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResponsavel.resx">
+      <DependentUpon>FrmResponsavel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResponsavelPesquisa.resx">
+      <DependentUpon>FrmResponsavelPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUnidMedida.resx">
+      <DependentUpon>FrmUnidMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUnidMedidaPesquisa.resx">
+      <DependentUpon>FrmUnidMedidaPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuariosPesquisa.resx">
+      <DependentUpon>FrmUsuariosPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{8EBEAE5C-1110-43D2-A09F-BC79AE137CDB}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbaCon\DbaCon.csproj">
+      <Project>{F9BA8225-2952-49B5-AFD2-4C80F6317227}</Project>
+      <Name>DbaCon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{36785FB1-1962-4730-A2DF-D1D8DF3D7FDE}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="briefcase-table.ico" />
+    <None Include="Resources\folder_open.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

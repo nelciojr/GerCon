@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36785FB1-1962-4730-A2DF-D1D8DF3D7FDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DTO</RootNamespace>
+    <AssemblyName>DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bairro.cs" />
+    <Compile Include="BairroColecao.cs" />
+    <Compile Include="BaixaItens.cs" />
+    <Compile Include="BaixaItensColecao.cs" />
+    <Compile Include="Cidade.cs" />
+    <Compile Include="CidadeColecao.cs" />
+    <Compile Include="Contrato.cs" />
+    <Compile Include="ContratoColecao.cs" />
+    <Compile Include="Departamento.cs" />
+    <Compile Include="DepartamentoColecao.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="EstadoColecao.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="FornecedorColecao.cs" />
+    <Compile Include="Genero.cs" />
+    <Compile Include="GeneroColecao.cs" />
+    <Compile Include="ItensContrato.cs" />
+    <Compile Include="ItensContratoColecao.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="MarcaColecao.cs" />
+    <Compile Include="Modalidade.cs" />
+    <Compile Include="ModalidadeColecao.cs" />
+    <Compile Include="Orgao.cs" />
+    <Compile Include="OrgaoColecao.cs" />
+    <Compile Include="ProdutoColecao.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="Responsavel.cs" />
+    <Compile Include="ResponsavelColecao.cs" />
+    <Compile Include="Tipo.cs" />
+    <Compile Include="TipoColecao.cs" />
+    <Compile Include="UnidMedida.cs" />
+    <Compile Include="UnidMedidaColecao.cs" />
+    <Compile Include="Usuarios.cs" />
+    <Compile Include="UsuariosColecao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbaCon\DbaCon.csproj">
+      <Project>{F9BA8225-2952-49B5-AFD2-4C80F6317227}</Project>
+      <Name>DbaCon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

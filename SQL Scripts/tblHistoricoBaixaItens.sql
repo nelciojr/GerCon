@@ -1,0 +1,20 @@
+CREATE TABLE TBLHISTORICOBAIXAITENS
+(
+  ID_BAIXAITEM integer,
+  ID_ITEM integer,
+  NUMERO_NOTA decimal(18,2),
+  DATA_BAIXAITEM date,
+  QTDE_BAIXAITEM decimal(18,2),
+  VALOR_BAIXA decimal(18,2),
+  QTDESALDO_BAIXAITEM decimal(18,2),
+  SALDO_BAIXAITEM decimal(18,2),
+  ID_CONTRATO integer,
+  ID_DEPARTAMENTO integer,
+  ID_PRODUTO integer,
+  ID_USUARIO integer,
+  ACAO varchar(1),
+  DATA_MODIFICACAO date,
+  HORA_MODIFICACAO time
+);
+
+
